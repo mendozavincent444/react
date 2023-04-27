@@ -2,12 +2,17 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from 'react-router-dom';
 
 function NavScrollExample() {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">Sample Website</Navbar.Brand>
+
+        <Link to="/">
+          <Navbar.Brand>Sample Website</Navbar.Brand>
+        </Link>
+
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -15,29 +20,33 @@ function NavScrollExample() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
+            <Nav.Link>Home</Nav.Link>
+            <Nav.Link>Link</Nav.Link>
             <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
+              <NavDropdown.Item>Action</NavDropdown.Item>
+              <NavDropdown.Item>
                 Another action
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
+              <NavDropdown.Item>
                 Something else here
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
+            <Nav.Link disabled>
               Link
             </Nav.Link>
           </Nav>
 
           <ul class="navbar-nav d-flex flex-row me-1">
             <li class="px-2">
-              <button type="button" class="btn btn-outline-success">Login</button>
+              <Link to="/login">
+                <button type="button" class="btn btn-outline-success">Login</button>
+              </Link>
             </li>
             <li class="px-2">
-              <button type="button" class="btn btn-outline-warning">Register</button>
+              <Link to="/register">
+                <button type="button" class="btn btn-outline-warning">Register</button>
+              </Link>
             </li>
 
 
