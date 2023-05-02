@@ -8,8 +8,8 @@ function HomePage() {
     
       <Header/>
       <MainStory/>
-      <Articles/>      
-      
+      <Articles/> 
+
     </div>
 
   );
